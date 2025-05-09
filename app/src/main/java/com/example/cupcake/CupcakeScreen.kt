@@ -149,5 +149,5 @@ private fun cancelOrderAndNavigateToStart(
     navController: NavHostController
 ) {
     viewModel.resetOrder()
-    navController.popBackStack(CupcakeScreen.Start.name, inclusive = true);
+    navController.popBackStack(CupcakeScreen.Start.name, inclusive = false);
 }
