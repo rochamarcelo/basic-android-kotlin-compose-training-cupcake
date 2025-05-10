@@ -1,15 +1,24 @@
 package com.example.cupcake.test
 
 import androidx.activity.ComponentActivity
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onNodeWithText
 import com.example.cupcake.ui.SelectOptionScreen
 import com.example.cupcake.R
 import org.junit.Rule
 import org.junit.Test
 
-@get:Rule
-val composeTestRule = createAndroidComposeRule<ComponentActivity>()
+
 class AndroidComposeTestRule {
+    @get:Rule
+    val composeTestRule = createAndroidComposeRule<ComponentActivity>()
+
+    /**
+     * When list of options and subtotal are provided to SelectOptionScreen,the options and subtotal
+     * are displayed on the screen and the next button is disabled.
+     */
     @Test
     fun selectOptionScreen_verifyContent() {
         // Given list of options
